@@ -1,0 +1,170 @@
+:root {
+  --bg: #0f1117;
+  --card: #171a21;
+  --card-hover: #1d212b;
+  --text: #e6e8ec;
+  --muted: #9aa3af;
+  --line: #2a2f3a;
+  --accent: #d4af37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  line-height: 1.7;
+  padding: 24px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  background: var(--card-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.card h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.card p {
+  margin-bottom: 12px;
+}
+
+blockquote {
+  background: #10131a;
+  border-left: 3px solid var(--accent);
+  padding: 12px 16px;
+  margin: 12px 0;
+  border-radius: 6px;
+  color: #d5d8dd;
+  font-style: italic;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+th {
+  background: #1b1f29;
+  color: var(--accent);
+}
+
+ul {
+  margin: 10px 0 10px 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+  padding: 30px 0 10px;
+  border-top: 1px solid var(--line);
+  margin-top: 20px;
+}
+
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.prev-next a {
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.prev-next a:hover {
+  background: var(--card-hover);
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 12px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    display: block;
+  }
+}
